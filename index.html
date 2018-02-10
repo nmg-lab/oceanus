@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="user" class="container">
+			<div class="userBox">
+				<div class="login col-lg-3 col-sm-3 showElement">
+					<h1>Sgin in</h1>
+
+					<div class="form-group">
+						<input id="loginAccount" class="form-control" placeholder="please input your Accoune" />
+						<input id="loginPassword" class="form-control" placeholder="please input your password" />
+						<button id="loginSubmit" class="btn btn-primary">Sign in</button>
+						<button id="GoRegister" class="btn btn-primary">Go register</button>
+					</div>
+				</div>
+				<div class="register col-lg-3 col-sm-3">
+					<h1>Sgin up</h1>
+
+					<div class="form-group">
+						<input id="account" class="form-control" placeholder="please input your Accoune" />
+						<input id="password" class="form-control" placeholder="please input your password" />
+						<input id="email" class="form-control" placeholder="please input your E-mail" />
+						<button id="registerSubmit" class="btn btn-primary">Sign up</button>
+						<button id="back" class="btn btn-primary">BACK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main" class="container hideElement">
+			<ul class="nav nav-tabs rightNav">
+				<li id="test" class="active">
+					<a>Input Information</a>
+				</li>
+				<li id="count">
+					<a>Manage IP</a>
+				</li>
+				<li id="history">
+					<a>Product List</a>
+				</li>
+			</ul>
+			<div class="inputInformatoion">
+				<div class="form-group" style="width: 80%;">
+					<label for="factory" class="col-sm-2 col-lg-2 control-label">fix factory</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="factory" placeholder="pleast input factory">
+					</div>
+					<label for="address" class="col-sm-2 col-lg-2 control-label">adderss</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="address" placeholder="请输入姓">
+					</div>
+					<label class="col-sm-2 col-lg-2 control-label" for="name">Kinds Of Product</label>
+					<div class="col-sm-12 col-lg-12" style="margin-bottom: 14px;">
+
+						<select class="form-control">
+							<option>please chose</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+					<label for="date" class="col-sm-2 col-lg-2 control-label">date</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="date" placeholder="请输入姓">
+					</div>
+					<label for="_NO" class="col-sm-2 col-lg-2 control-label">NO.</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="_NO" placeholder="请输入姓">
+					</div>
+					<label for="total" class="col-sm-2 col-lg-2 control-label">Total storage capacity</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="total" placeholder="Total storage capacity">
+					</div>
+					<label for="slots" class="col-sm-2 col-lg-2 control-label">Number of slots</label>
+					<div class="col-sm-10 col-lg-10">
+						<input type="text" class="form-control" id="slots" placeholder="请输入姓">
+					</div>
+				</div>
+				<div class="col-sm-10 col-lg-10">
+					<div class="productOwn">
+						<span>Ownership and Obligation:</span>
+						<p>unbre</p>
+						<button class="btn btn-primary">modfiy</button>
+					</div>
+					<div class="produtLeader">
+						<span>leading official:</span>
+						<p>Morning Star 792634614@qq.ocm</p>
+						<button class="btn btn-primary">modfiy</button>
+					</div>
+					<div>
+						<label class="col-sm-2 col-lg-2 control-label">Monitor</label>
+
+						<label class="radio-inline">
+        					<input type="radio" id="optionsRadios3" value="option1" checked> true
+    					</label>
+						<label class="radio-inline">
+        					<input type="radio" id="optionsRadios4"  value="option2"> false
+   				 		</label>
+					</div>
+					<div>
+						<label class="col-sm-2 col-lg-2 control-label">run</label>
+
+						<label class="radio-inline">
+        					<input type="radio" id="optionsRadios3" value="option1" checked> true
+    					</label>
+						<label class="radio-inline">
+        					<input type="radio" id="optionsRadios4"  value="option2"> false
+   				 		</label>
+					</div>
+				</div>
+			</div>
+			<div class="ManageIP">
+
+			</div>
+			<div class="productList">
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</html>

@@ -1,0 +1,52 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+#user,#main{
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.userBox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.login,.register{
+	height: 60%;
+	min-height: 300px;
+	border-radius:8px;
+	box-shadow: 0px 0px 10px rgba(34,34,34,.35);
+	padding: 8px;
+	display: none;
+}
+.showElement h1{
+	text-align: center;
+}
+.showElement{
+	display: block;
+}
+.form-group input{
+	margin-bottom: 12px;
+}
+.form-group button{
+	margin-bottom: 10px;
+	width: 100%;
+}
+/*业务逻辑界面*/
+.hideElement{
+	display: none !important;
+}
+.productOwn,.produtLeader{
+	display: flex;
+	border-bottom: 1px solid rgba(50,50,50,.45);
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}
+.productOwn *{
+	margin-right: 10px;
+}
+.produtLeader *{
+	margin-right: 10px;
+}

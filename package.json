@@ -1,0 +1,14 @@
+{
+  "name": "holiday",
+  "version": "1.0.0",
+  "description": "holiday project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "452406853s"
+  ],
+  "author": "792634614@qq.com",
+  "license": "ISC"
+}
