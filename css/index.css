@@ -50,3 +50,27 @@
 .produtLeader *{
 	margin-right: 10px;
 }
+.ManageIP{
+	display: none;
+}
+.tableTitleBox{
+	
+}
+.tableTitleBox div{
+	border: 1px solid #222;
+	border-right: 0px;
+}
+.tableTitleBox div:last-child{
+	border: 1px solid #222;
+}
+.tableBody{
+	display: flex !important;
+	justify-content: flex-end;
+}
+.tableBody div{
+	border: 1px solid #222;
+	border-right: 0px;
+}
+.tableBody div:last-child{
+	border: 1px solid #222;
+}
