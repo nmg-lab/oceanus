@@ -88,3 +88,6 @@
 .selectTableTitleBox div{
 	padding: 5px;
 }
+.selectTableBox div{
+	text-align: center;
+}
