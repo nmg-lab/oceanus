@@ -74,3 +74,17 @@
 .tableBody div:last-child{
 	border: 1px solid #222;
 }
+.productList{
+	padding-top: 20px;
+	padding-left: 20px;
+	display: none;
+}
+.selectTableTitleBox{
+	text-align: center;
+	margin-top: 10px;
+	background-color: #EBEBEB;
+	font-weight: 800;
+}
+.selectTableTitleBox div{
+	padding: 5px;
+}

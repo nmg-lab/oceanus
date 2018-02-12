@@ -45,7 +45,7 @@ document.querySelector('.rightNav').addEventListener('click', (e) => {
 			document.querySelectorAll('.menuItems')[i].style.display = 'none'
 			let item = document.querySelectorAll('.menuItems')[i];
 			if(item.getAttribute('data-id') == target.parentNode.id){
-				item.style.display = 'block'
+				item.style.display = 'block';
 			}
 		}
 		target.parentNode.classList.add('active');
