@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.yunke.dao.equipment.YunkeEquipmentDao">
+    
+	<sql id="yunkeEquipmentColumns">
+		a.id AS "id",
+		a.factory AS "factory",
+		a.position AS "position",
+		a.type AS "type",
+		a.model AS "model",
+		a.outtime AS "outtime",
+		a.sequencenumber AS "sequencenumber",
+		a.sum AS "sum",
+		a.cardnumber AS "cardnumber",
+		a.power AS "power",
+		a.people AS "people",
+		a.monitor AS "monitor",
+		a.run AS "run",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag"
+	</sql>
+	
+	<sql id="yunkeEquipmentJoins">
+	</sql>
+    
+	<select id="get" resultType="YunkeEquipment">
+		SELECT 
+			<include refid="yunkeEquipmentColumns"/>
+		FROM yunke_equipment a
+		<include refid="yunkeEquipmentJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="YunkeEquipment">
+		SELECT 
+			<include refid="yunkeEquipmentColumns"/>
+		FROM yunke_equipment a
+		<include refid="yunkeEquipmentJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="model != null and model != ''">
+				AND a.model = #{model}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="YunkeEquipment">
+		SELECT 
+			<include refid="yunkeEquipmentColumns"/>
+		FROM yunke_equipment a
+		<include refid="yunkeEquipmentJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO yunke_equipment(
+			id,
+			factory,
+			position,
+			type,
+			model,
+			outtime,
+			sequencenumber,
+			sum,
+			cardnumber,
+			power,
+			people,
+			monitor,
+			run,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{factory},
+			#{position},
+			#{type},
+			#{model},
+			#{outtime},
+			#{sequencenumber},
+			#{sum},
+			#{cardnumber},
+			#{power},
+			#{people},
+			#{monitor},
+			#{run},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE yunke_equipment SET 	
+			factory = #{factory},
+			position = #{position},
+			type = #{type},
+			model = #{model},
+			outtime = #{outtime},
+			sequencenumber = #{sequencenumber},
+			sum = #{sum},
+			cardnumber = #{cardnumber},
+			power = #{power},
+			people = #{people},
+			monitor = #{monitor},
+			run = #{run},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE yunke_equipment SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
