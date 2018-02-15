@@ -10,5 +10,10 @@
     "452406853s"
   ],
   "author": "792634614@qq.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
 }

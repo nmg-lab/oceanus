@@ -23,10 +23,31 @@ document.querySelector('#loginSubmit').addEventListener('click', () => {
 		account: document.getElementById('loginAccount').value,
 		password: document.getElementById('loginPassword').value
 	}
-	document.querySelector('#user').classList.add('hideElement');
-	document.querySelector('#main').classList.remove('hideElement');
-
+	$.post('http://127.0.0.1:3000/login', userInfo, (data) => {
+		if(data) {
+			console.log(data);
+			let user = eval(data);
+			localStorage.userId = user.id;
+			document.querySelector('#user').classList.add('hideElement');
+			document.querySelector('#main').classList.remove('hideElement');
+		}
+	})
 });
+document.getElementById('registerSubmit').addEventListener('click', () => {
+	let userInfo = {
+		account: document.getElementById('account').value,
+		password: document.getElementById('password').value,
+		username: document.getElementById('username').value,
+		email: document.getElementById('email').value
+	}
+	$.post('http://127.0.0.1:3000/login', userInfo, (data) => {
+		if(data) {
+			console.log(data);
+			document.querySelector('.login').classList.add('showElement');
+			document.querySelector('.register').classList.remove('showElement');
+		}
+	})
+})
 document.querySelector('#back').addEventListener('click', (e) => {
 	//	let ev  = e|| window.event
 	//	let target = ev.target || ev.srcElement;
@@ -38,13 +59,13 @@ document.querySelector('.rightNav').addEventListener('click', (e) => {
 	let ev = e || ev.target;
 	let target = ev.target || ev.srcElement;
 	if(target.nodeName.toLowerCase() == 'a') {
-//		target.parentNode.previousSibling.classList.remove('active');
-//		target.parentNode.nextSibling.classList.remove('active');
-		for (let i = 0;i<3;i++) {
+		//		target.parentNode.previousSibling.classList.remove('active');
+		//		target.parentNode.nextSibling.classList.remove('active');
+		for(let i = 0; i < 3; i++) {
 			document.querySelector('.rightNav').getElementsByTagName('li')[i].classList.remove('active');
 			document.querySelectorAll('.menuItems')[i].style.display = 'none'
 			let item = document.querySelectorAll('.menuItems')[i];
-			if(item.getAttribute('data-id') == target.parentNode.id){
+			if(item.getAttribute('data-id') == target.parentNode.id) {
 				item.style.display = 'block';
 			}
 		}
